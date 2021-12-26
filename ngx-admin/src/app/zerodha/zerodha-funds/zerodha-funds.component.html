@@ -1,0 +1,103 @@
+<hr>
+<div class="row" [nbSpinner]="loading" nbSpinnerStatus="danger" nbSpinnerSize="large" nbSpinnerMessage="">
+
+    <div class="col-md-6">
+        <nb-card>
+            <nb-card-header>
+                <h5 style="text-align: center;">Equity</h5>
+            </nb-card-header>
+            <nb-card-body>
+                <table class="table table-bordered" style="color:gray;">
+                    <tbody>
+                        <tr>
+                            <td>Enabled: </td>
+                            <td>{{fundsData['equity'].enabled }}</td>
+                        </tr>
+                        <tr>
+                            <td>Net: </td>
+                            <td>{{fundsData['equity'].net }}</td>
+                        </tr>
+                        <tr>
+                            <td>Available: </td>
+                            <td>
+                                <br> adhoc_margin : {{fundsData['equity'].available.adhoc_margin}}
+                                <br> cash : {{fundsData['equity'].available.cash}}
+                                <br> opening_balance : {{fundsData['equity'].available.opening_balance}}
+                                <br> collateral : {{fundsData['equity'].available.collateral}}
+                                <br> intraday_payin : {{fundsData['equity'].available.intraday_payin}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Utilised: </td>
+                            <td>
+                                <br> debits : {{fundsData['equity'].utilised.debits}}
+                                <br> exposure : {{fundsData['equity'].utilised.exposure}}
+                                <br> m2m_realised : {{fundsData['equity'].utilised.m2m_realised}}
+                                <br> m2m_unrealised : {{fundsData['equity'].utilised.m2m_unrealised}}
+                                <br> option_premium : {{fundsData['equity'].utilised.option_premium}}
+                                <br> payout : {{fundsData['equity'].utilised.payout}}
+                                <br> span : {{fundsData['equity'].utilised.span}}
+                                <br> holding_sales : {{fundsData['equity'].utilised.holding_sales}}
+                                <br> turnover : {{fundsData['equity'].utilised.turnover}}
+                                <br> liquid_collateral : {{fundsData['equity'].utilised.liquid_collateral}}
+                                <br> stock_collateral : {{fundsData['equity'].utilised.stock_collateral}}
+                                <br> delivery : {{fundsData['equity'].utilised.delivery}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </nb-card-body>
+        </nb-card>
+    </div>
+
+    <div class="col-md-6">
+        <nb-card>
+            <nb-card-header>
+                <h5 style="text-align: center;">Commodity</h5>
+            </nb-card-header>
+            <nb-card-body>
+                <table class="table table-bordered" style="color:gray;">
+                    <tbody>
+                        <tr>
+                            <td>Enabled: </td>
+                            <td>{{fundsData['commodity'].enabled }}</td>
+                        </tr>
+                        <tr>
+                            <td>Net: </td>
+                            <td>{{fundsData['commodity'].net }}</td>
+                        </tr>
+                        <tr>
+                            <td>Available: </td>
+                            <td>
+                                <br> adhoc_margin : {{fundsData['commodity'].available.adhoc_margin}}
+                                <br> cash : {{fundsData['commodity'].available.cash}}
+                                <br> opening_balance : {{fundsData['commodity'].available.opening_balance}}
+                                <br> collateral : {{fundsData['commodity'].available.collateral}}
+                                <br> intraday_payin : {{fundsData['commodity'].available.intraday_payin}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Utilised: </td>
+                            <td>
+                                <br> debits : {{fundsData['commodity'].utilised.debits}}
+                                <br> exposure : {{fundsData['commodity'].utilised.exposure}}
+                                <br> m2m_realised : {{fundsData['commodity'].utilised.m2m_realised}}
+                                <br> m2m_unrealised : {{fundsData['commodity'].utilised.m2m_unrealised}}
+                                <br> option_premium : {{fundsData['commodity'].utilised.option_premium}}
+                                <br> payout : {{fundsData['commodity'].utilised.payout}}
+                                <br> span : {{fundsData['commodity'].utilised.span}}
+                                <br> holding_sales : {{fundsData['commodity'].utilised.holding_sales}}
+                                <br> turnover : {{fundsData['commodity'].utilised.turnover}}
+                                <br> liquid_collateral : {{fundsData['commodity'].utilised.liquid_collateral}}
+                                <br> stock_collateral : {{fundsData['commodity'].utilised.stock_collateral}}
+                                <br> delivery : {{fundsData['commodity'].utilised.delivery}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </nb-card-body>
+        </nb-card>
+    </div>
+
+</div>
+<hr>

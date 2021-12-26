@@ -1,0 +1,20 @@
+<!-- 
+Request URL: https://api.moneycontrol.com/mcapi/technicals/v2/details?scId=C&dur=D&deviceType=W
+just casual referece for tech analysis
+-->
+<!-- <hr> -->
+<div class="row" [nbSpinner]="loading" nbSpinnerStatus="danger" nbSpinnerSize="large" nbSpinnerMessage="">
+<nb-card>
+    <nb-card-header>
+        Instruments : {{totalInstruments}}
+        <button class="btn btn-primary float-right" (click)="instruments_retrieve()">Refresh</button>
+    </nb-card-header>
+
+    <nb-card-body>
+        <ng2-smart-table [settings]="settings" [source]="source" (createConfirm)="onAddClient($event)"
+            (editConfirm)="onEditConfirm($event)" (deleteConfirm)="onDeleteConfirm($event)">
+        </ng2-smart-table>
+    </nb-card-body>
+</nb-card>
+</div>
+<hr>

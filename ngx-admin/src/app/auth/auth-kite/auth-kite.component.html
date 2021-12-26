@@ -1,0 +1,23 @@
+<hr>
+<div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+        <nb-card [nbSpinner]="loading" nbSpinnerStatus="danger" nbSpinnerSize="large" nbSpinnerMessage="">
+            <nb-card-header>
+                <h5 style="text-align: center;">Kite Authentication</h5>
+            </nb-card-header>
+            <nb-card-body>
+                <div class="form-group">
+                    <textarea placeholder="enctoken here .. .. .." class="form-control" [(ngModel)]="token" cols="30"
+                        rows="5"></textarea>
+                </div>
+                <button (click)="getProfile()" style="width: 100%;" type="submit"
+                    class="btn btn-primary">Submit</button>
+            </nb-card-body>
+        </nb-card>
+    </div>
+    <div class="col-md-4">
+    </div>
+</div>
+<hr>

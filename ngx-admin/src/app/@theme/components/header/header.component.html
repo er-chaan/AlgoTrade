@@ -1,0 +1,55 @@
+<div class="header-container">
+  <div class="logo-container">
+    <a (click)="toggleSidebar()" href="#" class="sidebar-toggle">
+      <nb-icon icon="menu-2-outline"></nb-icon>
+    </a>
+    <a class="logo" href="#" (click)="navigateHome()">Algo-<span>Trade</span></a>
+  </div>
+  <!-- <nb-select [selected]="currentTheme" (selectedChange)="changeTheme($event)" status="primary">
+    <nb-option *ngFor="let theme of themes" [value]="theme.value"> {{ theme.name }}</nb-option>
+  </nb-select> -->
+</div>
+
+<div class="header-container">
+  <nb-actions size="small">
+
+    <!-- <nb-action class="control-item">
+      <nb-search type="rotate-layout"></nb-search>
+    </nb-action>
+    <nb-action class="control-item" icon="email-outline"></nb-action>
+    <nb-action class="control-item" icon="bell-outline"></nb-action>
+    <nb-action class="user-action" *nbIsGranted="['view', 'user']" >
+      <nb-user [nbContextMenu]="userMenu"
+               [onlyPicture]="userPictureOnly"
+               [name]="user?.name"
+               [picture]="user?.picture">
+      </nb-user>
+    </nb-action> -->
+
+    <nb-action class="control-item">
+      Nifty 50 <nb-icon style="color: red;" icon="arrow-down" pack="eva"></nb-icon> 17876 | 10%
+    </nb-action>
+    <nb-action class="control-item">
+      Bank Nifty <nb-icon style="color:green;" icon="arrow-up" pack="eva"></nb-icon> 17876 | 10%
+    </nb-action>
+    <nb-action class="control-item">
+      Sensex <nb-icon style="color: red;" icon="arrow-down" pack="eva"></nb-icon> 17876 | 10%
+    </nb-action>
+    <nb-action class="control-item">
+      India Vix <nb-icon style="color: red;" icon="arrow-down" pack="eva"></nb-icon> 17876 | 10%
+    </nb-action>
+
+    <nb-action class="control-item">
+      {{time}}
+    </nb-action>
+
+    <!-- <nb-action class="control-item">
+      <nb-select [selected]="currentTheme" (selectedChange)="changeTheme($event)" status="primary">
+        <nb-option *ngFor="let theme of themes" [value]="theme.value"> {{ theme.name }}</nb-option>
+      </nb-select>
+    </nb-action> -->
+
+    <nb-action class="control-item" icon="arrow-circle-right-outline" (click)="logout()"></nb-action>
+
+  </nb-actions>
+</div>

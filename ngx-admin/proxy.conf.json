@@ -1,0 +1,26 @@
+{
+    "/oms/*": {
+        "target": "https://kite.zerodha.com",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    },
+    "/api/*": {
+        "target": "https://kite.zerodha.com",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    },
+    "/mcapi/*": {
+        "target": "https://api.moneycontrol.com/",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    },
+    "/pricefeed/*": {
+        "target": "https://priceapi.moneycontrol.com/",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}

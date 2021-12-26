@@ -1,0 +1,35 @@
+<!-- <div  style="width: 100%;" class="row" [nbSpinner]="loading" nbSpinnerStatus="danger" nbSpinnerSize="large" nbSpinnerMessage=""> -->
+<nb-card>
+    <nb-card-header>
+        <!-- Instruments : {{totalInstruments}} -->
+        <!-- <button class="btn btn-primary float-right" (click)="getChartData()">Refresh</button> -->
+        <!-- <nb-select placeholder="Select Showcase" [(selected)]="selectedItem">
+            <nb-option value="">Select Instrument</nb-option>
+            <nb-option *ngFor="let data of instrumentsData" [value]="data.symbol">{{data.symbol}}</nb-option>
+        </nb-select> -->
+
+        <button style="margin-left: 20px;" class="btn btn-primary float-right" (click)="getChartData()">Get Chart</button>
+
+        &nbsp;&nbsp;
+
+        <input  style="width: 100%;" class="float-right" #autoInput nbInput type="text" (input)="onChange()" placeholder="Enter Instrument Symbol" [nbAutocomplete]="auto" />
+
+        <nb-autocomplete #auto (selectedChange)="onSelectionChange($event)">
+
+            <nb-option *ngFor="let option of filteredOptions$ | async" [value]="option">
+                {{ option }}
+            </nb-option>
+
+        </nb-autocomplete>
+
+
+
+    </nb-card-header>
+
+    <nb-card-body>
+        <div *ngIf="!chartData">No Chart Data</div>
+        <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+    </nb-card-body>
+</nb-card>
+<!-- </div> -->
+<hr>
